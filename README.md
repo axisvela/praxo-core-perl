@@ -5,18 +5,17 @@ embeddable, MIT-licensed agent execution kernel with policy controls,
 human-in-the-loop approval, checkpoints, events, and tool calling.
 
 - Package: `Praxo::Core` (`0.1.1`)
-- Registry: CPAN / MetaCPAN
+- Registry: CPAN (MetaCPAN index)
+- Install: `cpanm Praxo::Core`
 - Documentation: https://axisvela.github.io/praxo-core/languages/perl/
+- Mirror repository: https://github.com/axisvela/praxo-core-perl
 - Canonical source: https://github.com/axisvela/praxo-core/tree/main/language/perl
 - Release index: https://axisvela.github.io/praxo-core/languages/registry-status/
 
-This repository is a discovery mirror of the canonical Perl source. The
-monorepo remains the source of truth and the release workflow source. Shared
-conformance vectors are included under `spec/`.
-
-## Install or build
-
-Install with `cpanm Praxo::Core`; MetaCPAN indexing status is recorded in the canonical registry page.
+This repository is a discovery mirror of the canonical Perl source.
+The monorepo remains the source of truth and the release workflow source. Shared
+conformance vectors are included under `spec/`, so the implementation can be
+built and tested here.
 
 ## Verify
 
