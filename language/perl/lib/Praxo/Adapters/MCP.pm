@@ -8,7 +8,7 @@ sub new {
     my ($class, %args) = @_;
     return bless {
         transport => $args{transport},
-        client_version => $args{client_version} // '0.4.0',
+        client_version => $args{client_version} // '0.3.0',
         protocol_version => $args{protocol_version} // '2024-11-05',
         connected => 0,
         closed => 0,
@@ -80,15 +80,25 @@ sub close {
     my ($self) = @_;
     $self->{closed} = 1;
     $self->{connected} = 0;
+    my $transport = $self->{transport};
+    if (ref($transport) && eval { $transport->can('close') }) {
+        eval { $transport->close };
+    }
     return;
 }
 
 sub _request {
     my ($self, $method, $params) = @_;
     praxo_error('MCP_CLOSED', 'mcp: client is closed') if $self->{closed};
-    praxo_error('MCP_TRANSPORT', 'mcp: transport is required')
-        unless ref($self->{transport}) eq 'CODE';
-    my $result = $self->{transport}->($method, $params);
+    my $transport = $self->{transport};
+    my $result;
+    if (ref($transport) && eval { $transport->can('request') }) {
+        $result = $transport->request($method, $params);
+    } elsif (ref($transport) eq 'CODE') {
+        $result = $transport->($method, $params);
+    } else {
+        praxo_error('MCP_TRANSPORT', 'mcp: transport is required');
+    }
     return ref($result) eq 'HASH' ? $result : {};
 }
 
