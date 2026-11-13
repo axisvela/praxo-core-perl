@@ -4,7 +4,7 @@ Dedicated repository for the Perl implementation of PRAXO-CORE: an
 embeddable, MIT-licensed agent execution kernel with policy controls,
 human-in-the-loop approval, checkpoints, events, and tool calling.
 
-- Package: `Praxo::Core` (`0.2.0`)
+- Package: `Praxo::Core` (`0.4.0`)
 - Registry: CPAN (MetaCPAN index)
 - Install: `cpanm Praxo::Core`
 - Documentation: https://axisvela.github.io/praxo-core/languages/perl/
