@@ -8,6 +8,7 @@ human-in-the-loop approval, checkpoints, events, and tool calling.
 - Registry: CPAN (MetaCPAN index)
 - Install: `cpanm Praxo::Core`
 - Documentation: https://axisvela.github.io/praxo-core/languages/perl/
+- Examples: https://github.com/axisvela/praxo-core-perl/tree/main/language/perl/examples
 - Mirror repository: https://github.com/axisvela/praxo-core-perl
 - Canonical source: https://github.com/axisvela/praxo-core/tree/main/language/perl
 - Release index: https://axisvela.github.io/praxo-core/languages/registry-status/
