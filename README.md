@@ -9,9 +9,9 @@ PRAXO-CORE is an embeddable, MIT-licensed agent framework. This distribution is 
 | Package | `Praxo::Core` |
 | Registry | [CPAN (MetaCPAN index)](https://metacpan.org/dist/Praxo-Core) |
 | Install | `cpanm Praxo::Core` |
-| Source version | `0.4.0` |
+| Source version | `0.5.0` |
 | Published version | `0.4.0` |
-| Source tag | `perl/v0.4.0` |
+| Source tag | `perl/v0.5.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/perl/ |
@@ -73,8 +73,10 @@ Runnable examples live under [`language/perl/examples`](language/perl/examples).
 | Example | What it shows |
 | --- | --- |
 | [checkpoint](language/perl/examples/checkpoint) | This example uses the Perl Core checkpoint allowlist for a registered payload round trip. |
+| [consumer](language/perl/examples/consumer) | This example uses the source Perl Core with a deterministic model, one registered `record` tool, an explicit tool scope, and a policy that permits only the `public` target. It d... |
 | [event-sink](language/perl/examples/event-sink) | This example uses Perl Core sink composition to fan out events and filter the tool-only stream. |
 | [identity-policy](language/perl/examples/identity-policy) | This example binds a trusted principal to policy decisions and rejects missing, role-mismatched, and tenant-mismatched actions. |
+| [live-model](language/perl/examples/live-model) | This example connects the Perl Core to an OpenAI-compatible endpoint through `Praxo::Adapters::OpenAICompatible` and registers one low-risk `get_time` tool with a small JSON Sch... |
 | [mcp](language/perl/examples/mcp) | This example uses a caller-owned in-process transport with the Perl MCP client. |
 | [provider-fallback](language/perl/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
 | [retry](language/perl/examples/retry) | This example retries a transient failure with a bounded attempt count and keeps the exhausted failure state. |
