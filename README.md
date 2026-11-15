@@ -9,9 +9,9 @@ PRAXO-CORE is an embeddable, MIT-licensed agent framework. This distribution is 
 | Package | `Praxo::Core` |
 | Registry | [CPAN (MetaCPAN index)](https://metacpan.org/dist/Praxo-Core) |
 | Install | `cpanm Praxo::Core` |
-| Source version | `0.5.1` |
+| Source version | `0.6.0` |
 | Published version | `0.5.1` |
-| Source tag | `perl/v0.5.1` |
+| Source tag | `perl/v0.6.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/perl/ |
