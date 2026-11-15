@@ -10,7 +10,7 @@ PRAXO-CORE is an embeddable, MIT-licensed agent framework. This distribution is 
 | Registry | [CPAN (MetaCPAN index)](https://metacpan.org/dist/Praxo-Core) |
 | Install | `cpanm Praxo::Core` |
 | Source version | `0.6.0` |
-| Published version | `0.5.1` |
+| Published version | `0.6.0` |
 | Source tag | `perl/v0.6.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
