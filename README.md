@@ -1,6 +1,6 @@
 # PRAXO-CORE for Perl
 
-PRAXO-CORE is an embeddable, MIT-licensed agent framework. This distribution is its native Perl Core: an agent loop with tool registration and dispatch, policy hooks, typed events, memory, checkpoints, context budgets, middleware, OTel and Harmovela sinks, MCP, retriever and synchronous delegation seams, JSON Schema validation, and plugin manifest parsing.
+PRAXO-CORE is an embeddable, MIT-licensed agent framework. This distribution is its native Perl Core: an agent loop with tool registration and dispatch, policy hooks, human-in-the-loop interrupt decisions, typed events, memory, checkpoints, context budgets, middleware, OTel and Harmovela sinks, MCP, retriever and synchronous delegation seams, JSON Schema validation, and plugin manifest parsing.
 
 ## At a glance
 
@@ -75,6 +75,7 @@ Runnable examples live under [`language/perl/examples`](language/perl/examples).
 | [checkpoint](language/perl/examples/checkpoint) | This example uses the Perl Core checkpoint allowlist for a registered payload round trip. |
 | [consumer](language/perl/examples/consumer) | This example uses the source Perl Core with a deterministic model, one registered `record` tool, an explicit tool scope, and a policy that permits only the `public` target. It d... |
 | [event-sink](language/perl/examples/event-sink) | This example uses Perl Core sink composition to fan out events and filter the tool-only stream. |
+| [hitl](language/perl/examples/hitl) | This example demonstrates a write tool that requires human approval: |
 | [identity-policy](language/perl/examples/identity-policy) | This example binds a trusted principal to policy decisions and rejects missing, role-mismatched, and tenant-mismatched actions. |
 | [live-model](language/perl/examples/live-model) | This example connects the Perl Core to an OpenAI-compatible endpoint through `Praxo::Adapters::OpenAICompatible` and registers one low-risk `get_time` tool with a small JSON Sch... |
 | [mcp](language/perl/examples/mcp) | This example uses a caller-owned in-process transport with the Perl MCP client. |
