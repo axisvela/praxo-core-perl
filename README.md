@@ -9,9 +9,9 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This distribution 
 | Package | `Praxo::Core` |
 | Registry | [CPAN (MetaCPAN index)](https://metacpan.org/dist/Praxo-Core) |
 | Install | `cpanm Praxo::Core` |
-| Source version | `0.6.2` |
+| Source version | `0.7.0` |
 | Published version | `0.6.1` |
-| Source tag | `perl/v0.6.2` |
+| Source tag | `perl/v0.7.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/perl/ |
@@ -57,9 +57,9 @@ See the [full Perl README](language/perl/README.md) for complete installation, b
 
 | Capability | Status | Detail |
 | --- | --- | --- |
-| OpenAI-compatible model | native | `Praxo::Adapters::OpenAICompatible`; SSE streaming reassembly |
-| Anthropic model | native | `Praxo::Adapters::Anthropic` ; Anthropic SSE streaming |
-| Gemini model | native | `Praxo::Adapters::Gemini`; Gemini SSE streaming |
+| OpenAI-compatible model | native | `Praxo::Adapters::OpenAICompatible`; `generate_stream` reassembles SSE content, tool calls, usage, and finish reason |
+| Anthropic model | native | `Praxo::Adapters::Anthropic`; `generate_stream` reassembles Anthropic SSE |
+| Gemini model | native | `Praxo::Adapters::Gemini`; `generate_stream` reassembles Gemini SSE |
 | MCP client | native | `Praxo::Adapters::MCP`; stdio, plus `Praxo::Adapters::MCPHTTP` for Streamable HTTP 2025-03-26 |
 | Harmovela sink | native | `Praxo::Adapters::Harmovela` |
 | OpenTelemetry sink | native (transport seam) | `Praxo::Adapters::Otel`; caller supplies transport |
