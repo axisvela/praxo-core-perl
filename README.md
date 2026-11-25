@@ -12,8 +12,6 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This distribution 
 | Source version | `0.7.1` |
 | Published version | `0.7.1` |
 | Source tag | `perl/v0.7.1` |
-| Tutorial tag | `perl/tutorial/v0.1.0` |
-| Examples tag | `perl/examples/v0.1.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/perl/ |
