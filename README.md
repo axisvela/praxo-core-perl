@@ -12,6 +12,8 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This distribution 
 | Source version | `0.7.1` |
 | Published version | `0.7.1` |
 | Source tag | `perl/v0.7.1` |
+| Tutorial tag | `perl/tutorial/v0.1.0` |
+| Examples tag | `perl/examples/v0.1.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/perl/ |
@@ -87,6 +89,19 @@ Runnable examples live under [`language/perl/examples`](language/perl/examples).
 | [session-checkpoint](language/perl/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns. It uses the Core allowlist for payload encoding and a teaching in-memory payload. |
 | [streaming](language/perl/examples/streaming) | This example accumulates streamed chunks and checks that they reconstruct the final output. |
 | [structured-output](language/perl/examples/structured-output) | This example validates a final JSON answer against a schema and rejects invalid output. |
+
+## Scenario Tutorials
+
+Scenario-oriented tutorials live under `language/perl/Tutorial`.
+
+| Path | What it shows |
+| --- | --- |
+| [Tutorial](language/perl/Tutorial) | Application tutorials live in `Tutorial/`, alongside focused `language/go/examples/`. |
+| [community-governance](language/perl/Tutorial/community-governance) | Fixed synthetic issues produce four classified items and a review-only reviewer request. No GitHub API, closure or impersonation. |
+| [compliance-tracking](language/perl/Tutorial/compliance-tracking) | Fixed policy versions yield two changed sections and a duplicate removal; Core drafts review-only remediation. No filing, audit conclusion or live source. |
+| [localization-draft](language/perl/Tutorial/localization-draft) | Fixed market rules produce a review-only localized text draft. No translation engine, CMS or publication. |
+| [log-triage](language/perl/Tutorial/log-triage) | A small operations tutorial using the native Perl Core. The Agent has one fixed tool, `summarize_log`, which reads the tutorial's own log fixture and returns severity counts. Th... |
+| [news-factcheck](language/perl/Tutorial/news-factcheck) | A bounded first slice of MD-02, not a truth-verification service. It compares fixed source excerpts for one synthetic article, cites a contradiction and drafts a review-only fac... |
 
 ## Verify
 
