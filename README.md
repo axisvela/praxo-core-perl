@@ -8,10 +8,11 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This distribution 
 | --- | --- |
 | Package | `Praxo::Core` |
 | Registry | [CPAN (MetaCPAN index)](https://metacpan.org/dist/Praxo-Core) |
-| Install | `cpanm Praxo::Core` |
+| Install | `cpanm Praxo::Core@0.8.0` |
 | Source version | `0.8.0` |
-| Published version | `0.7.1` |
-| Source tag | `perl/v0.8.0` |
+| Published version | `0.8.0` |
+| Publication status | published on CPAN; README.pod indexed |
+| Canonical source tag | [`perl/v0.8.0`](https://github.com/axisvela/praxo-core/tree/perl/v0.8.0) |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/perl/ |
@@ -33,7 +34,7 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This distribution 
 Install the published package:
 
 ```bash
-cpanm Praxo::Core
+cpanm Praxo::Core@0.8.0
 ```
 
 ```perl
@@ -144,7 +145,7 @@ This mirror contains the language source and the shared `spec/` vectors, so the 
 - Mirror repository: https://github.com/axisvela/praxo-core-perl
 - Release index: https://axisvela.github.io/praxo-core/languages/registry-status/
 
-This repository is a discovery mirror of the canonical Perl source. The monorepo remains the source of truth and the release workflow source.
+This repository is a discovery mirror of the canonical Perl source. The monorepo remains the source of truth and the release workflow source. The mirror's `main` branch tracks current source, not a release snapshot. Source tags refer to the canonical monorepo and are not necessarily present in this mirror; syncing the branch does not publish mirror tags or registry packages.
 
 PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
 
