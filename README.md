@@ -1,6 +1,6 @@
 # PRAXO-CORE for Perl
 
-PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This distribution is its native Perl Core: an agent loop with tool registration and dispatch, policy hooks, human-in-the-loop interrupt decisions, typed events, memory, checkpoints, context budgets, middleware, OTel and Harmovela sinks, MCP, retriever and synchronous delegation seams, JSON Schema validation, and plugin manifest parsing.
+PRAXO-CORE (also written praxocore) is an embeddable, MIT-licensed agent framework. PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This distribution is its native Perl Core: an agent loop with tool registration and dispatch, policy hooks, human-in-the-loop interrupt decisions, typed events, memory, checkpoints, context budgets, middleware, OTel and Harmovela sinks, MCP, retriever and synchronous delegation seams, JSON Schema validation, and plugin manifest parsing.
 
 ## At a glance
 
@@ -73,13 +73,13 @@ Runnable examples live under [`language/perl/examples`](language/perl/examples).
 
 | Example | What it shows |
 | --- | --- |
-| [advanced-delegation](language/perl/examples/advanced-delegation) | This example shows an application-level parent/child agent pattern. The parent agent may call a `delegate` tool but not the child's `record` tool. The delegate tool runs a child... |
+| [advanced-delegation](language/perl/examples/advanced-delegation) | This example shows an application-level parent/child agent pattern. The parent agent may call a `delegate` tool but not the child's `record` tool. The delegate tool runs a child agent with its own tool scope, policy, and deterministic model. |
 | [checkpoint](language/perl/examples/checkpoint) | This example uses the Perl Core checkpoint allowlist for a registered payload round trip. |
-| [consumer](language/perl/examples/consumer) | This example uses the source Perl Core with a deterministic model, one registered `record` tool, an explicit tool scope, and a policy that permits only the `public` target. It d... |
+| [consumer](language/perl/examples/consumer) | This example uses the source Perl Core with a deterministic model, one registered `record` tool, an explicit tool scope, and a policy that permits only the `public` target. It does not use a network or a live model. |
 | [event-sink](language/perl/examples/event-sink) | This example uses Perl Core sink composition to fan out events and filter the tool-only stream. |
 | [hitl](language/perl/examples/hitl) | This example demonstrates a write tool that requires human approval: |
 | [identity-policy](language/perl/examples/identity-policy) | This example binds a trusted principal to policy decisions and rejects missing, role-mismatched, and tenant-mismatched actions. |
-| [live-model](language/perl/examples/live-model) | This example connects the Perl Core to an OpenAI-compatible endpoint through `Praxo::Adapters::OpenAICompatible` and registers one low-risk `get_time` tool with a small JSON Sch... |
+| [live-model](language/perl/examples/live-model) | This example connects the Perl Core to an OpenAI-compatible endpoint through `Praxo::Adapters::OpenAICompatible` and registers one low-risk `get_time` tool with a small JSON Schema. The policy allows only `model.generate` and the `get_time` `tool.invoke`; the tool scope is `["get_time"]`. |
 | [mcp](language/perl/examples/mcp) | This example uses a caller-owned in-process transport with the Perl MCP client. |
 | [provider-fallback](language/perl/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
 | [representative-chain](language/perl/examples/representative-chain) | This deterministic example exercises the same application seams as the Go representative chain without a live provider: |
@@ -99,8 +99,8 @@ Scenario-oriented tutorials live under `language/perl/Tutorial`. Planning contex
 | [community-governance](language/perl/Tutorial/community-governance) | Fixed synthetic issues produce four classified items and a review-only reviewer request. No GitHub API, closure or impersonation. |
 | [compliance-tracking](language/perl/Tutorial/compliance-tracking) | Fixed policy versions yield two changed sections and a duplicate removal; Core drafts review-only remediation. No filing, audit conclusion or live source. |
 | [localization-draft](language/perl/Tutorial/localization-draft) | Fixed market rules produce a review-only localized text draft. No translation engine, CMS or publication. |
-| [log-triage](language/perl/Tutorial/log-triage) | A small operations tutorial using the native Perl Core. The Agent has one fixed tool, `summarize_log`, which reads the tutorial's own log fixture and returns severity counts. Th... |
-| [news-factcheck](language/perl/Tutorial/news-factcheck) | A bounded first slice of MD-02, not a truth-verification service. It compares fixed source excerpts for one synthetic article, cites a contradiction and drafts a review-only fac... |
+| [log-triage](language/perl/Tutorial/log-triage) | A small operations tutorial using the native Perl Core. The Agent has one fixed tool, `summarize_log`, which reads the tutorial's own log fixture and returns severity counts. The deterministic model then returns a structured report with an empty `mutating_actions` list. It does not read arbitrary files, execute shell commands, send alerts, or change the log. |
+| [news-factcheck](language/perl/Tutorial/news-factcheck) | A bounded first slice of MD-02, not a truth-verification service. It compares fixed source excerpts for one synthetic article, cites a contradiction and drafts a review-only fact-check. No live news crawl, publish or truth guarantee. |
 
 ## Reference Applications
 
@@ -117,6 +117,11 @@ perl language/perl/tests/run.pl
 ```
 
 This mirror contains the language source and the shared `spec/` vectors, so the implementation can be built and tested here. See [`language/perl/README.md`](language/perl/README.md) for the exact commands. The monorepo CI runs conformance, API snapshot, and native tests for this implementation.
+
+## Boundaries
+
+Reference application source is not end-to-end portfolio acceptance; follow each README's scope and evidence.
+PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
 
 ## Community
 
@@ -147,6 +152,5 @@ This mirror contains the language source and the shared `spec/` vectors, so the 
 
 This repository is a discovery mirror of the canonical Perl source. The monorepo remains the source of truth and the release workflow source. The mirror's `main` branch tracks current source, not a release snapshot. Source tags refer to the canonical monorepo and are not necessarily present in this mirror; syncing the branch does not publish mirror tags or registry packages.
 
-PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
 
 MIT licensed.
